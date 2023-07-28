@@ -154,9 +154,6 @@ public class Main {
             if (year > twoHundredYearsAgo && year < aHundredYearsAhead) {
                 System.out.println(year);
             }
-
         }
-
     }
-
 }
