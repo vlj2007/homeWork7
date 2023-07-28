@@ -4,6 +4,7 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
 
     }
 
@@ -87,6 +88,25 @@ public class Main {
             interestPerMonth = savingsAccount / 100;
             interestPerMonth = interestPerMonth * i;
             System.out.println("Месяц " + i + " Итого " + interestPerMonth);
+        }
+    }
+
+    public static void task5() {
+        System.out.println("Задача 5");
+        int savingsAccount = 0;
+        int interestOnDeposit = 7;
+        int initialDepositAmount = 15_000;
+        int interestPerMonth = 0;
+        int i = 0;
+        while (interestPerMonth < 12_000_000) {
+            i++;
+            savingsAccount = initialDepositAmount * interestOnDeposit;
+            interestPerMonth = savingsAccount / 100;
+            interestPerMonth = interestPerMonth * i;
+            interestPerMonth += 1;
+            if (i % 6 == 0) {
+                System.out.println("Месяц " + i + " Итого " + interestPerMonth);
+            }
         }
     }
 }
