@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1() {
@@ -132,7 +133,7 @@ public class Main {
         } while (month <= months);
     }
 
-    public static void task7(){
+    public static void task7() {
         System.out.println("Задача 7");
         int friday = 1;
         int month = 31;
@@ -143,4 +144,19 @@ public class Main {
             System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет.");
         } while (friday <= month);
     }
+
+    public static void task8() {
+        System.out.println("Задача 8");
+        int yearNow = 2023;
+        int twoHundredYearsAgo = yearNow - 200;
+        int aHundredYearsAhead = yearNow + 100;
+        for (int year = 0; year <= aHundredYearsAhead; year += 79) {
+            if (year > twoHundredYearsAgo && year < aHundredYearsAhead) {
+                System.out.println(year);
+            }
+
+        }
+
+    }
+
 }
