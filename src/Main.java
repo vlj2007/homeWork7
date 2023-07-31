@@ -45,7 +45,7 @@ public class Main {
         int years = 10;
         int year = 1;
 
-        while (year<=years){
+        while (year <= years) {
             total += total * (birthRate - mortality) / 1000;
             System.out.println("Год " + year + " , численность населения составляет " + total);
             year++;
@@ -54,56 +54,54 @@ public class Main {
 
     public static void task4() {
         System.out.println("Задача 4");
-        int savingsAccount = 0;
+        double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        int initialDepositAmount = 15_000;
-        int interestPerMonth = 0;
-        int i = 0;
-        while (interestPerMonth <= 12_000_000) {
-            i++;
-            savingsAccount = initialDepositAmount * interestOnDeposit;
-            interestPerMonth = savingsAccount / 100;
-            interestPerMonth = interestPerMonth * i;
-            System.out.println("Месяц " + i + " Итого " + interestPerMonth);
+        double initialDepositAmount = 15_000d;
+        int month = 0;
+        double collectTheAmount = 12_000_000d;
+
+        while (savingsAccount <= collectTheAmount) {
+            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
+            month++;
+            System.out.println("Месяц " + month + " Итого " + savingsAccount);
         }
+        System.out.println(" Месяцев " + month + " Итого " + savingsAccount);
+
     }
 
     public static void task5() {
         System.out.println("Задача 5");
-        int savingsAccount = 0;
+        double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        int initialDepositAmount = 15_000;
-        int interestPerMonth = 0;
-        int i = 0;
-        while (interestPerMonth < 12_000_000) {
-            i++;
-            savingsAccount = initialDepositAmount * interestOnDeposit;
-            interestPerMonth = savingsAccount / 100;
-            interestPerMonth = interestPerMonth * i;
-            interestPerMonth += 1;
-            if (i % 6 == 0) {
-                System.out.println("Месяц " + i + " Итого " + interestPerMonth);
+        double initialDepositAmount = 15_000d;
+        int month = 0;
+        double collectTheAmount = 12_000_000d;
+
+        while (savingsAccount <= collectTheAmount) {
+            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
+            month++;
+            System.out.println("Месяц " + month + " Итого " + savingsAccount);
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " Итого " + savingsAccount);
+
             }
         }
+        System.out.println(" Месяцев " + month + " Итого " + savingsAccount);
     }
 
     public static void task6() {
         System.out.println("Задача 6");
-        int savingsAccount = 0;
+        double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        int initialDepositAmount = 15_000;
-        int interestPerMonth = 0;
+        double initialDepositAmount = 15_000d;
         int month = 0;
         int year = 12;
         int months = year * 9;
         do {
+            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
             month++;
-            savingsAccount = initialDepositAmount * interestOnDeposit;
-            interestPerMonth = savingsAccount / 100;
-            interestPerMonth = interestPerMonth * month;
-
             if (month % 6 == 0) {
-                System.out.println("Месяц " + month + " Итого " + interestPerMonth);
+                System.out.println("Месяц " + month + " Итого " + savingsAccount);
             }
         } while (month <= months);
     }
