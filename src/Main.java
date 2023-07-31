@@ -66,7 +66,6 @@ public class Main {
             System.out.println("Месяц " + month + " Итого " + savingsAccount);
         }
         System.out.println(" Месяцев " + month + " Итого " + savingsAccount);
-
     }
 
     public static void task5() {
