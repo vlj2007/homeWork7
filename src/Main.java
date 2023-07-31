@@ -39,41 +39,16 @@ public class Main {
 
     public static void task3() {
         System.out.println("Задача 3");
-        int countryY = 12_000_000;
         int birthRate = 17;
         int mortality = 8;
-        int totalPopulation = 0;
-        int yearBirthRate = 0;
-        int yearMortality = 0;
+        int total = 12_000_000;
+        int years = 10;
+        int year = 1;
 
-//        int totalPopulationBirthRate = 0;
-        //        Год …, численность населения составляет …
-        while (totalPopulation < 10) {
-            totalPopulation = countryY * birthRate;
-            int totalPopulationBirthRate = totalPopulation / 1000;
-//            System.out.println("Рождаемость в 1 год " + totalPopulationBirthRate);
-
-            totalPopulation = countryY * mortality;
-            int totalPopulationMortality = totalPopulation / 1000;
-//            System.out.println("Смертность в 1 год " + totalPopulationMortality);
-
-            for (int i = 1; i <= 10; i++) {
-                yearBirthRate = totalPopulationBirthRate * i;
-//                System.out.println(i + " " + yearBirthRate);
-            }
-
-            for (int i = 1; i <= 10; i++) {
-                yearMortality = totalPopulationMortality * i;
-//                System.out.println(i + " " + yearMortality);
-            }
-
-            for (int i = 1; i <= 10; i++) {
-                int people = yearBirthRate - yearMortality;
-                int result = people * i;
-                System.out.println("Год " + i + ", численность населения составляет " + result);
-
-            }
-
+        while (year<=years){
+            total += total * (birthRate - mortality) / 1000;
+            System.out.println("Год " + year + " , численность населения составляет " + total);
+            year++;
         }
     }
 
@@ -137,11 +112,9 @@ public class Main {
         System.out.println("Задача 7");
         int friday = 1;
         int month = 31;
-        System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет.");
-
         do {
-            friday += 7;
             System.out.println("Сегодня пятница, " + friday + " -е число. Необходимо подготовить отчет.");
+            friday += 7;
         } while (friday <= month);
     }
 
