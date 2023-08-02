@@ -56,48 +56,40 @@ public class Main {
         System.out.println("Задача 4");
         double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        double initialDepositAmount = 15_000d;
         int month = 0;
         double collectTheAmount = 12_000_000d;
-
         while (savingsAccount <= collectTheAmount) {
-            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
             month++;
+            savingsAccount += savingsAccount * interestOnDeposit /100;
             System.out.println("Месяц " + month + " Итого " + savingsAccount);
         }
-        System.out.println(" Месяцев " + month + " Итого " + savingsAccount);
     }
 
     public static void task5() {
         System.out.println("Задача 5");
         double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        double initialDepositAmount = 15_000d;
         int month = 0;
         double collectTheAmount = 12_000_000d;
 
         while (savingsAccount <= collectTheAmount) {
-            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
+            savingsAccount += savingsAccount * interestOnDeposit /100;
             month++;
-            System.out.println("Месяц " + month + " Итого " + savingsAccount);
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " Итого " + savingsAccount);
-
             }
         }
-        System.out.println(" Месяцев " + month + " Итого " + savingsAccount);
     }
 
     public static void task6() {
         System.out.println("Задача 6");
         double savingsAccount = 15_000d;
         int interestOnDeposit = 7;
-        double initialDepositAmount = 15_000d;
         int month = 0;
         int year = 12;
         int months = year * 9;
         do {
-            savingsAccount += initialDepositAmount * interestOnDeposit / 100;
+            savingsAccount += savingsAccount * interestOnDeposit /100;
             month++;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + " Итого " + savingsAccount);
